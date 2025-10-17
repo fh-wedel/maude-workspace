@@ -1,0 +1,23 @@
+{
+  "name": "Maude Workspace",
+  "build": {
+        "dockerfile": "Dockerfile"
+  },
+  "features": {
+        "ghcr.io/devcontainers/features/java:1": {
+          "version": "none",
+          "installMaven": "true",
+          "installGradle": "false"
+        },
+        "ghcr.io/devcontainers-contrib/features/ant-sdkman:2": {}
+      },
+  "postCreateCommand": "echo \"export PATH=$PATH:/root/maude\" >> /root/.bashrc",  
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "sirquini.maude"
+      ]
+    }
+  }
+}
+

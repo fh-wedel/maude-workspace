@@ -1,0 +1,18 @@
+fmod HELLO is
+
+  sorts Message .
+
+  ops Hello, World : -> Message . 
+
+  op main : Message -> Message .
+
+  eq main(Hello) = World .
+
+endfm
+
+--- Try this
+--- Maude> red main(Hello) .
+--- reduce in HELLO : main(Hello) .
+--- rewrites: 1 in 0ms cpu (0ms real) (~ rewrites/second)
+--- result Message: World
+  
